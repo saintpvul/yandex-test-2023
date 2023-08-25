@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-color: #21201f;
+    --button-color: #ffde40;
+    --hover-button-color: #f90;
+}
+
+/* Adding fonts */
+
+@font-face {
+    font-family: "TextBlack";
+    src: url("https://yastatic.net/s3/home/fonts/ys/4/text-black.woff")
+        format("woff");
+}
+
+@font-face {
+    font-family: "TextMedium";
+    src: url("https://yastatic.net/s3/home/fonts/ys/4/text-medium.woff")
+        format("woff");
+}
+
+@font-face {
+    font-family: "TextRegular";
+    src: url("https://yastatic.net/s3/home/fonts/ys/4/text-regular.woff")
+        format("woff");
+}
+
+/* Main settings */
+
+.heading {
+    font-family: "TextBlack", Arial, sans-serif;
+}
+
+p {
+    font-family: "TextMedium", Arial, sans-serif;
+}
+
+body {
+    color: var(--font-color);
+}
+
+.wrapper {
+    max-width: 1440px;
+}
+
+.button {
+    transition: all 0.3s ease;
+    background: var(--button-color);
+}
+
+.button:hover {
+    background: var(--hover-button-color);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+/* Header section */
+.page-header {
+    position: relative;
+    height: 50.25rem;
+    padding-left: 16.37rem;
+}
+
+/* Page header background */
+.page-header__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.page-header__background-straight {
+    opacity: 0.22;
+    background: var(
+        --linear,
+        linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.2) 100%
+        ),
+        linear-gradient(
+            90deg,
+            #ff5c4d 0%,
+            #eb469f 25%,
+            #8341ef 72%,
+            #3f68f9 100%
+        )
+    );
+}
+
+.page-header__background-opposite {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+}
+
+.page-header__background-image {
+    position: absolute;
+    top: 5.8rem;
+    right: 3.46rem;
+    width: 46.5rem;
+    height: 38.625rem;
+    transform: rotate(-8.008deg);
+    background: url(./src/main-scooter.png) 0px -80.031px / 100% 120.285% no-repeat;
+    z-index: -1;
+}
+
+.page-header__background-image-shadow {
+    position: absolute;
+    top: 9.7rem;
+    left: 35.64rem;
+    width: 41.1125rem;
+    height: 25.11894rem;
+    transform: rotate(-140.03deg);
+    border-radius: 41.1125rem;
+    opacity: 0.5;
+    background: #8241ef;
+    filter: blur(100px);
+    z-index: -2;
+}
+
+.page-header__background-image-text {
+    position: absolute;
+    top: 24.6rem;
+    left: 48.2rem;
+    width: 13rem;
+    aspect-ratio: 1/1;
+    background: url(./src/spinned-text.png) 0px 0px / 100% 100% no-repeat;
+    filter: invert(100%);
+    transform: rotate(0deg);
+    animation: rotateAnimation 30s linear infinite;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.page-header__logo {
+    margin-top: 7.75rem;
+}
+
+/* Page header content */
+
+.page-header__title {
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: -0.09rem;
+    margin-top: 3.6rem;
+}
+
+.page-header__description {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.page-header__descriprion_price {
+    display: inline-flex;
+    padding: 0 0.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 31.25rem;
+}
+
+.new-price {
+    background: radial-gradient(
+        141.42% 141.42% at 100% -0%,
+        #e0b8ff 0%,
+        #b6b9ff 100%
+    );
+}
+
+.old-price {
+    position: absolute;
+    font-size: 1rem;
+    margin-left: -1.2rem;
+    padding-left: 2rem;
+    background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.63) 0%,
+            rgba(255, 255, 255, 0.63) 100%
+        ),
+        radial-gradient(141.42% 141.42% at 100% -0%, #e0b8ff 0%, #b6b9ff 100%);
+    z-index: -1;
+}
+
+.page-header__button {
+    display: inline-flex;
+    margin-top: 2rem;
+    padding: 1.5rem 3rem;
+    align-items: center;
+    border-radius: 2.25rem;
+    box-shadow: 0px 4px 98px 0px rgba(255, 222, 64, 0.59);
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+    cursor: pointer;
+}
