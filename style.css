@@ -95,7 +95,6 @@ body {
 .page-header__background-image {
     position: absolute;
     transform: rotate(-8.008deg);
-    background: url(./src/main-scooter.png) 0px -80.031px / 100% 120.285% no-repeat;
     z-index: -1;
 }
 
@@ -128,14 +127,12 @@ body {
 /* Page header content */
 
 .page-header__title {
-    font-size: 4.5rem;
     font-style: normal;
     font-weight: 900;
     line-height: 100%;
 }
 
 .page-header__description {
-    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
 }
@@ -162,18 +159,17 @@ body {
             rgba(255, 255, 255, 0.63) 100%
         ),
         radial-gradient(141.42% 141.42% at 100% -0%, #e0b8ff 0%, #b6b9ff 100%);
+    text-decoration: line-through;
     z-index: -1;
 }
 
 .page-header__button {
     display: inline-flex;
-    font-size: 1.5rem;
 }
 
 /* Main content section */
 
 .main-content__benefits-heading {
-    font-size: 3.5rem;
     font-style: normal;
     font-weight: 900;
     line-height: 100%;
@@ -185,13 +181,9 @@ body {
 
 .main-content__benefit-icon-point {
     position: absolute;
-    margin-top: 0.1rem;
-    margin-left: 4.1rem;
-    font-size: 2.8rem;
 }
 
 .main-content__benefit-text {
-    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
 }
@@ -199,8 +191,6 @@ body {
 /* Perks */
 
 .main-content__perks-heading {
-    margin-top: 8.32rem;
-    font-size: 3rem;
     font-style: normal;
     font-weight: 900;
     line-height: 100%;
@@ -208,7 +198,6 @@ body {
 }
 
 .main-content__perks-text {
-    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
@@ -217,7 +206,6 @@ body {
 /* Perks photos */
 
 .perks-photo {
-    border-radius: 4rem;
     background: #dedede;
     overflow: hidden;
 }
@@ -271,7 +259,6 @@ body {
 }
 
 .main-content__invite-heading {
-    font-size: 3rem;
     font-style: normal;
     font-weight: 900;
     line-height: 100%;
@@ -279,7 +266,6 @@ body {
 }
 
 .main-content__invite-text {
-    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
@@ -336,7 +322,6 @@ body {
 }
 
 .main-content__get-pass-heading {
-    font-size: 3rem;
     font-style: normal;
     font-weight: 900;
     line-height: 100%;
@@ -344,14 +329,12 @@ body {
 }
 
 .main-content__get-pass-text {
-    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
 }
 
 .main-content__get-pass-button {
-    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
 }
@@ -365,7 +348,6 @@ a:checked {
 
 .footer-rights__info {
     color: var(--info-color);
-    font-size: 0.8125rem;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
@@ -373,6 +355,7 @@ a:checked {
 
 /* media queries 1440  */
 
+/*
 @media (min-width: 376px) {
     .wrapper {
         max-width: 1440px;
@@ -414,7 +397,8 @@ a:checked {
         top: 5.8rem;
         right: 7.17rem;
         width: 46.5rem;
-        height: 38.625rem;
+        height: 38.625rem; 
+    background: url(./src/main-scooter.png) 0px -80.031px / 100% 120.285% no-repeat;
     }
     .page-header__background-image-shadow {
         top: 9.7rem;
@@ -424,7 +408,7 @@ a:checked {
         border-radius: 41.1125rem;
     }
 
-    .page-header__background-image-text. {
+    .page-header__background-image-text {
         top: 24.6rem;
         left: 48.2rem;
         width: 13rem;
@@ -434,11 +418,13 @@ a:checked {
         margin-top: 7.75rem;
     }
     .page-header__title {
-        letter-spacing: -0.09rem;
         margin-top: 3.6rem;
+        font-size: 4.5rem;
+        letter-spacing: -0.09rem;
     }
     .page-header__description {
         margin-top: 2rem;
+        font-size: 1.5rem;
         line-height: 130%;
     }
 
@@ -454,6 +440,7 @@ a:checked {
     }
     .page-header__button {
         margin-top: 2.1rem;
+        font-size: 1.5rem;
         line-height: 1.375rem;
     }
 
@@ -463,6 +450,7 @@ a:checked {
 
     .main-content__benefits-heading {
         margin-top: -0.2rem;
+        font-size: 3.5rem;
         letter-spacing: -0.07rem;
     }
 
@@ -483,10 +471,12 @@ a:checked {
     .main-content__benefit-icon-point {
         margin-top: 0.1rem;
         margin-left: 4.1rem;
+        font-size: 2.8rem;
     }
 
     .main-content__benefit-text {
         margin-top: 0.78rem;
+        font-size: 1.5rem;
         line-height: 120%;
     }
 
@@ -494,21 +484,25 @@ a:checked {
     .main-content__benefit-text:nth-child(2) {
         margin-bottom: -0.7rem;
     }
-
-    /* Perks */
+  // Perks  
 
     .main-content__perks-heading {
         margin-top: 8.32rem;
+        font-size: 3rem;
         letter-spacing: -0.06rem;
     }
 
     .main-content__perks-text {
         width: 27.4rem;
         margin-top: 2.2rem;
+        font-size: 1.5rem;
         line-height: 120%;
     }
+  // perks photos   
 
-    /* perks photos */
+    .perks-photo {
+        border-radius: 4rem;
+    }
 
     .main-content__perks-photos {
         display: flex;
@@ -612,6 +606,10 @@ a:checked {
         flex-direction: row;
     }
 
+    .main-content__invite-heading {
+        font-size: 3rem;
+    }
+
     .main-content__invite-content {
         margin-top: 6.67rem;
         margin-left: -0.12rem;
@@ -620,6 +618,7 @@ a:checked {
 
     .main-content__invite-text {
         margin-top: 2.2rem;
+        font-size: 1.5rem;
     }
 
     .main-content__invite-icon {
@@ -669,24 +668,100 @@ a:checked {
         width: 24.5rem;
         height: 24.5rem;
     }
-
-    /* content */
+  // content  
     .main-content__get-pass-content {
         margin-top: -1.3rem;
         margin-left: 8.2rem;
         width: 26rem;
     }
 
+    .main-content__get-pass-heading {
+        font-size: 3rem;
+    }
+
     .main-content__get-pass-text {
         margin: 2.2rem 0;
+        font-size: 1.5rem;
     }
 
     .main-content__get-pass-button {
         margin-top: 0.4rem;
         width: 17.6rem;
+        font-size: 1.5rem;
         line-height: 1.375rem;
     }
+
+    .footer-rights__info {
+        font-size: 0.8125rem;
+    }
+} 
+ */
+
+/* @media (max-width: 376px) { */
+.wrapper {
+    width: 375px;
 }
 
-@media (max-width: 375px) {
+.page-header {
+    position: relative;
+    width: 100%;
+    height: 39.7rem;
+}
+
+.page-header__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.page-header__logo {
+    padding: 2rem 0 0 2rem;
+}
+
+.page-header__title {
+    margin: 1.5rem 0 0 2rem;
+    font-size: 2.25rem;
+    letter-spacing: -0.045rem;
+}
+
+.page-header__description {
+    margin: 1.5rem 0 0 2rem;
+    font-size: 1.125rem;
+    line-height: 130%;
+}
+
+.page-header__descriprion_price {
+    border-radius: 31.25rem;
+    font-size: 1.125rem;
+    line-height: 120%;
+}
+.new-price {
+    padding: 0 0.5rem;
+}
+
+.old-price {
+    padding: 0.23rem 0.5rem;
+    margin-left: -1.7rem;
+    font-size: 0.8125rem;
+    padding-left: 2rem;
+}
+
+.page-header__background-image {
+    top: 19.75rem;
+    left: 1.48rem;
+    width: 19.9rem;
+    height: 16.6rem;
+    transform: rotate(-8.008deg);
+    background: url(./src/main-scooter.png) 0px -39.988px / 100% 120.285% no-repeat;
+}
+
+.page-header__background-image-text {
+    top: 27.45rem;
+    left: 6.55rem;
+    width: 5.4rem;
+    aspect-ratio: 1/1;
+    transform: rotate(3.699deg);
+}
+
+.page-header__button {
 }
