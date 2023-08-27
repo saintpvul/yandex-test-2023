@@ -687,3 +687,6 @@ a:checked {
         line-height: 1.375rem;
     }
 }
+
+@media (max-width: 375px) {
+}
