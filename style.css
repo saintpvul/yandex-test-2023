@@ -58,6 +58,10 @@ body {
     background: var(--button-color);
 }
 
+.button:active {
+    transform: scale(0.95);
+}
+
 /* Header section */
 .page-header {
     position: relative;
@@ -366,13 +370,9 @@ a:checked {
         cursor: pointer;
     }
 
-    .button:hover {
-        background: var(--hover-button-color);
-    }
-
-    .button:active {
-        transform: scale(0.95);
-    }
+.button:hover {
+    background: var(--hover-button-color);
+}
 
     .footer-rights__info {
         margin-top: 6.9rem;
@@ -764,4 +764,106 @@ a:checked {
 }
 
 .page-header__button {
+    position: fixed;
+    top: 37.5rem;
+    width: 19.4rem;
+    margin-left: 2rem;
+    padding: 0.89rem;
+    padding-left: 5rem;
+    z-index: 999;
+}
+
+.main-content {
+    margin-left: 2rem;
+}
+
+.main-content__benefits-heading {
+    width: 19.5rem;
+    font-size: 2rem;
+    letter-spacing: -0.04rem;
+}
+
+.main-content__benefits {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content__benefit {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.main-content__benefit:nth-child(1) {
+    margin-top: -0.4rem;
+}
+
+.main-content__benefit:nth-child(2) {
+    margin-top: 0.38rem;
+}
+
+.main-content__benefit:nth-child(3) {
+    margin-top: 0.4rem;
+}
+
+.main-content__benefit:nth-child(4) {
+    margin-top: 0.5rem;
+}
+
+.main-content__benefit-icon {
+    width: 5.1rem;
+    aspect-ratio: 1/1;
+}
+
+.main-content__benefit-icon-point {
+    font-size: 2rem;
+    left: 6.15rem;
+    top: 67.35rem;
+}
+
+.main-content__benefit-text {
+    margin-left: 1.1rem;
+    margin-top: -0.1rem;
+    width: 13.25rem;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.main-content__perks-heading {
+    margin-top: 3.2rem;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: -0.04rem;
+}
+
+.main-content__perks-text {
+    width: 19.4rem;
+    margin-top: 1.3rem;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.main-content__perks-photos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.75rem;
+    margin-left: -1rem;
+    border: 1px red solid;
+    width: 21.4rem;
+    height: 26rem;
+    overflow: hidden;
+}
+
+.main-content__perks-photo-container {
+    display: flex;
+    flex-direction: row;
+    width: calc((21.5rem + 1rem) * 4);
+}
+
+.perks-photo {
+    border-radius: 2.9rem;
+    margin-right: 1rem;
+    width: 21.5rem;
+    height: 21.5rem;
 }
