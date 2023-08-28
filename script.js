@@ -466,6 +466,8 @@ function setContentForScreenSize() {
                 changePhoto(leftArrow, rightArrow);
             }
         });
+
+        document.addEventListener("scroll", hideButton);
     } else {
         logoElement.innerHTML = `
                     <svg
@@ -548,3 +550,19 @@ let counter = 0;
 // apply content changing listeners
 window.addEventListener("load", setContentForScreenSize);
 window.addEventListener("resize", setContentForScreenSize);
+
+function hideButton() {
+    const mainButton = document.querySelector(".page-header__button");
+    const secondButton = document.querySelector(
+        ".main-content__get-pass-button"
+    );
+
+    const mainButtonRect = mainButton.getBoundingClientRect();
+    const secondButtonRect = secondButton.getBoundingClientRect();
+
+    if (mainButtonRect.bottom >= secondButtonRect.top) {
+        mainButton.style.marginLeft = "50rem";
+    } else {
+        mainButton.style.marginLeft = "2rem";
+    }
+}
