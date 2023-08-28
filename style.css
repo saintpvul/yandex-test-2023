@@ -58,6 +58,10 @@ body {
     background: var(--button-color);
 }
 
+.button:active {
+    transform: scale(0.95);
+}
+
 /* Header section */
 .page-header {
     position: relative;
@@ -228,12 +232,10 @@ body {
 
 .right-marker-1 {
     position: absolute;
-    transform: rotate(-45.264deg);
 }
 
 .main-content__perks-photos-right-marker-1 {
-    width: 100%;
-    height: 100%;
+    transform: rotate(-45.264deg);
     background: url(./src/right-marker-1.png) 0px 0px / contain no-repeat;
 }
 
@@ -256,6 +258,30 @@ body {
 .main-content__invite-content {
     display: flex;
     flex-direction: column;
+}
+
+.main-content__invite-icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content__invite-shadow {
+    background: var(--shadow-color);
+    filter: blur(60px);
+    opacity: 0.25;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.main-content__invite-scooter {
+    position: absolute;
+    background: url(/src/cloud-scooter.png) 0px 0px / contain no-repeat;
+}
+
+.main-content__invite-coin {
+    position: absolute;
+    transform: rotate(19.5deg);
+    background: url(/src/plus-coin.png) 0px 0px / contain no-repeat;
 }
 
 .main-content__invite-heading {
@@ -366,13 +392,9 @@ a:checked {
         cursor: pointer;
     }
 
-    .button:hover {
-        background: var(--hover-button-color);
-    }
-
-    .button:active {
-        transform: scale(0.95);
-    }
+.button:hover {
+    background: var(--hover-button-color);
+}
 
     .footer-rights__info {
         margin-top: 6.9rem;
@@ -564,11 +586,18 @@ a:checked {
         margin-left: -1rem;
     }
 
-    .right-marker-1 {
+    .right-marker-1 { 
+    width: 100%;
+    height: 100%;
         top: -4.4rem;
         right: -4.75rem;
         width: 10rem;
         height: 5rem;
+    }
+
+    .main-content__perks-photos-right-marker-1 {
+    width: 100%;
+    height: 100%;
     }
 
     .main-content__perks-photos-right-marker-shadow-1 {
@@ -621,41 +650,31 @@ a:checked {
         font-size: 1.5rem;
     }
 
-    .main-content__invite-icon {
-        position: relative;
+    .main-content__invite-icon { 
         margin-top: -3.27rem;
         margin-left: -2rem;
         width: 46.41338rem;
         height: 46.41338rem;
         transform: rotate(-13.159deg);
     }
+
     .main-content__invite-shadow {
-        margin-top: 7rem;
-        margin-left: 12rem;
-        width: 60%;
-        height: 60%;
-        background: var(--shadow-color);
-        filter: blur(60px);
-        opacity: 0.25;
-        border-radius: 50%;
-        z-index: -1;
+    margin-top: 7rem;
+    margin-left: 12rem;
+    width: 60%;
+    height: 60%;
     }
-    .main-content__invite-scooter {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: url(/src/cloud-scooter.png) 0px 0px / contain no-repeat;
+    .main-content__invite-scooter { 
+        top: 0;  
+    width: 100%;
+    height: 100%;
     }
 
-    .main-content__invite-coin {
-        position: absolute;
-        top: 8.19rem;
-        left: -6.8rem;
-        width: 39.25rem;
-        height: 39.25rem;
-        transform: rotate(19.5deg);
-        background: url(/src/plus-coin.png) 0px 0px / contain no-repeat;
+    .main-content__invite-coin { 
+    top: 8.19rem;
+    left: -6.8rem;
+    width: 39.25rem;
+    height: 39.25rem;
     }
 
     .main-content__get-pass {
@@ -764,4 +783,199 @@ a:checked {
 }
 
 .page-header__button {
+    position: fixed;
+    top: 37.5rem;
+    width: 19.4rem;
+    margin-left: 2rem;
+    padding: 0.89rem;
+    padding-left: 5rem;
+    z-index: 999;
+}
+
+.main-content {
+    margin-left: 2rem;
+}
+
+.main-content__benefits-heading {
+    width: 19.5rem;
+    font-size: 2rem;
+    letter-spacing: -0.04rem;
+}
+
+.main-content__benefits {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content__benefit {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.main-content__benefit:nth-child(1) {
+    margin-top: -0.4rem;
+}
+
+.main-content__benefit:nth-child(2) {
+    margin-top: 0.38rem;
+}
+
+.main-content__benefit:nth-child(3) {
+    margin-top: 0.4rem;
+}
+
+.main-content__benefit:nth-child(4) {
+    margin-top: 0.5rem;
+}
+
+.main-content__benefit-icon {
+    width: 5.1rem;
+    aspect-ratio: 1/1;
+}
+
+.main-content__benefit-icon-point {
+    font-size: 2rem;
+    left: 6.15rem;
+    top: 67.35rem;
+}
+
+.main-content__benefit-text {
+    margin-left: 1.1rem;
+    margin-top: -0.1rem;
+    width: 13.25rem;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.main-content__perks-heading {
+    margin-top: 3.2rem;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: -0.04rem;
+}
+
+.main-content__perks-text {
+    width: 19.4rem;
+    margin-top: 1.3rem;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.main-content__perks-photos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.75rem;
+    margin-left: -1rem;
+    width: 21.5rem;
+    height: 26rem;
+    overflow: hidden;
+}
+
+.main-content__perks-photo-container {
+    display: flex;
+    flex-direction: row;
+    width: calc((21.5rem + 1rem) * 4);
+    transition: all 0.5s ease;
+}
+
+.perks-photo {
+    border-radius: 2.9rem;
+    margin-right: 1rem;
+    width: 21.5rem;
+    height: 21.5rem;
+}
+
+.main-content__perks-photos-right-marker-1 {
+    position: absolute;
+    width: 4.85756rem;
+    height: 2.46363rem;
+    margin-top: -2.15rem;
+    right: 0.8rem;
+}
+
+.main-content__perks-photo-1 {
+    background: url(./src/left-1.jpeg) lightgray 0px 0px / 100% 100% no-repeat;
+}
+
+.main-content__perks-photo-2 {
+    background: url(./src/left-2.jpeg) lightgray 0px 0px / 100% 100% no-repeat;
+}
+
+.main-content__perks-photo-3 {
+    background: url(./src/right-1.jpeg) lightgray 0px 0px / 100% 100% no-repeat;
+}
+
+.main-content__perks-photo-4 {
+    background: url(./src/right-2.jpeg) lightgray 0px 0px / 100% 100% no-repeat;
+}
+
+.main-content__perks-photo-buttons {
+    width: 6.75rem;
+    margin: 1.45rem 7.4rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.perks-button {
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.3s ease;
+}
+
+.perks-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 4px 98px 0px rgba(255, 222, 64, 0.69);
+}
+
+.perks-photo-button-left {
+    margin-right: 0.7rem;
+}
+
+.main-content__invite {
+    margin-top: 4.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content__invite-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content__invite-heading {
+    margin-bottom: 1.35rem;
+    width: 18rem;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: -0.04rem;
+}
+
+.main-content__invite-text {
+    width: 19rem;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.main-content__invite-icon {
+    position: relative;
+    margin-top: 2.9rem;
+    margin-left: 1.42rem;
+    width: 17.70119rem;
+    height: 17.70119rem;
+}
+
+.main-content__invite-shadow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+}
+
+.main-content__invite-scooter {
+    width: 93%;
+    height: 93%;
 }
